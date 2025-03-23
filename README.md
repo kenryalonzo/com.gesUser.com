@@ -1,53 +1,40 @@
-# Nom du Projet
+# 🚀 Nom du Projet
 
-Une application web moderne conçue pour la gestion des utilisateurs et la sécurisation des interactions entre administrateurs et clients. Ce projet est structuré en deux parties distinctes – un backend en Node/Express avec TypeScript et un frontend en Vite utilisant vanilla TypeScript et Tailwind CSS – et intègre Docker pour la gestion de la base de données.
+Une application web moderne et sécurisée pour la gestion des utilisateurs, développée avec **Node.js, Express, TypeScript, Vite, Vanilla TS et Tailwind CSS**.  
+Elle utilise **Docker** pour la base de données et intègre un **CI/CD avec GitHub Actions** pour le déploiement automatisé.
 
----
-
-## Table des Matières
-
-- [Présentation du projet](#présentation-du-projet)
-- [Fonctionnalités](#fonctionnalités)
-- [Architecture](#architecture)
-- [Technologies utilisées](#technologies-utilisées)
-- [Installation et configuration](#installation-et-configuration)
-  - [Prérequis](#prérequis)
-  - [Installation du Backend](#installation-du-backend)
-  - [Installation du Frontend](#installation-du-frontend)
-  - [Utilisation de Docker](#utilisation-de-docker)
-- [Lancement du projet](#lancement-du-projet)
-- [Structure du projet](#structure-du-projet)
-- [Documentation et Contribuer](#documentation-et-contribuer)
-- [Licence](#licence)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/votre-repo/deploy.yml?branch=main)  
+![Docker](https://img.shields.io/badge/Docker-Compose-blue)  
+![Node.js](https://img.shields.io/badge/Node.js-TypeScript-green)  
 
 ---
 
-## Présentation du projet
-
-Ce projet vise à développer une application web sécurisée pour la gestion centralisée des utilisateurs d'une entreprise. L’objectif est de fournir une plateforme robuste, évolutive et facile à maintenir, en adoptant une architecture claire et des technologies modernes. Le backend expose une API REST sécurisée, tandis que le frontend offre une interface utilisateur intuitive et réactive.
+## 📌 Table des Matières  
+- [✨ Fonctionnalités](#-fonctionnalités)  
+- [📂 Architecture du projet](#-architecture-du-projet)  
+- [🔧 Technologies utilisées](#-technologies-utilisées)  
+- [🚀 Installation & Lancement](#-installation--lancement)  
+- [🐳 Utilisation de Docker](#-utilisation-de-docker)  
+- [🔄 CI/CD avec GitHub Actions](#-cicd-avec-github-actions)  
+- [🌍 Déploiement sur un serveur distant](#-déploiement-sur-un-serveur-distant)  
+- [🔗 API Endpoints](#-api-endpoints)  
+- [⚙️ Configuration des Variables d’Environnement](#️-configuration-des-variables-denvironnement)  
+- [📜 Licence](#-licence)  
 
 ---
 
-## Fonctionnalités
+## ✨ Fonctionnalités  
+✅ **Authentification sécurisée** avec bcrypt et gestion des rôles (Admin, Client)  
+✅ **Gestion des utilisateurs** (CRUD : Ajouter, Modifier, Supprimer, Activer/Désactiver)  
+✅ **Frontend moderne et responsive** avec Vite + Tailwind CSS  
+✅ **Base de données MySQL** gérée via **Docker**  
+✅ **CI/CD avec GitHub Actions** pour automatiser tests & déploiements  
 
-- **Authentification sécurisée**  
-  - Système d’inscription et de connexion avec hashage des mots de passe (bcrypt)
-  - Gestion des sessions et contrôle d'accès basé sur les rôles
-
-- **Gestion des utilisateurs**  
-  - Création, modification, suppression et activation/désactivation des comptes utilisateurs
-  - Tableau de bord pour les administrateurs pour consulter et gérer les utilisateurs
-
-- **Interface utilisateur**  
-  - Application frontend moderne avec Vite, vanilla TypeScript et Tailwind CSS
-  - Design responsive et expérience utilisateur fluide
-
-- **Containerisation**  
-  - Utilisation de Docker pour gérer la base de données (ex. MySQL)
-  
 ---
 
-## Architecture
+## 📂 Architecture du projet  
+
+### 🔧 Technologies utilisées  
 
 Le projet est divisé en deux parties :
 
@@ -84,7 +71,7 @@ Le projet est divisé en deux parties :
 
 ---
 
-## Installation et configuration
+## Configuration
 
 ### Prérequis
 
@@ -93,8 +80,8 @@ Le projet est divisé en deux parties :
 - [Docker](https://www.docker.com/) et [Docker Compose](https://docs.docker.com/compose/)
 - [Git](https://git-scm.com/)
 
-### Installation du Backend
+## 🚀 Installation & Lancement  
 
-1. **Cloner le dépôt et accéder au dossier backend**  
+### 1️⃣ **Cloner le dépôt**
    ```bash
    https://github.com/kenryalonzo/com.gesUser.com.git
