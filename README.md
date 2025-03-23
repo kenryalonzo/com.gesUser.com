@@ -97,5 +97,4 @@ Le projet est divisé en deux parties :
 
 1. **Cloner le dépôt et accéder au dossier backend**  
    ```bash
-   git clone https://github.com/votre-utilisateur/votre-projet.git
-   cd votre-projet/backend
+   https://github.com/kenryalonzo/com.gesUser.com.git
