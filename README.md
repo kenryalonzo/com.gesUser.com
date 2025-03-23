@@ -1,9 +1,9 @@
-# 🚀 Nom du Projet
+# 🚀 Gestion des utilisateurs -> Brief 4 ✨ 
 
 Une application web moderne et sécurisée pour la gestion des utilisateurs, développée avec **Node.js, Express, TypeScript, Vite, Vanilla TS et Tailwind CSS**.  
 Elle utilise **Docker** pour la base de données et intègre un **CI/CD avec GitHub Actions** pour le déploiement automatisé.
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/votre-repo/deploy.yml?branch=main)  
+![GitHub Workflow Status](https://github.com/kenryalonzo/com.gesUser.com/actions/runs/14021104029/job/39253230072)  
 ![Docker](https://img.shields.io/badge/Docker-Compose-blue)  
 ![Node.js](https://img.shields.io/badge/Node.js-TypeScript-green)  
 
