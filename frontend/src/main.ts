@@ -2,6 +2,20 @@ import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
+import { CheckCircleIcon, XCircleIcon } from './icons.ts';
+
+// Après les imports dans main.ts
+customElements.define('check-icon', class extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = CheckCircleIcon;
+  }
+});
+
+customElements.define('x-icon', class extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = XCircleIcon;
+  }
+});
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>

@@ -11,5 +11,12 @@
   "devDependencies": {
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@rive-app/react-canvas": "^4.18.3",
+    "@tailwindcss/vite": "^4.0.15",
+    "framer-motion": "^12.5.0",
+    "tailwindcss": "^4.0.15"
   }
 }
