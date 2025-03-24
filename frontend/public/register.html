@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easymail | Secure Registration</title>
+    <script src="https://unpkg.com/@heroicons/react@2.1.1/24/outline/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@rive-app/canvas@2.7.0"></script>
+    <script src="../src/register.ts" defer></script>
+    <link rel="stylesheet" href="../src/register.css">
+</head>
+<body class="min-h-screen bg-slate-50 flex items-center justify-center p-4 dark:bg-slate-900 transition-colors">
+    
+<!-- Animated Background -->
+<div class="fixed inset-0 z-0 opacity-10 dark:opacity-[0.03]">
+    <div class="absolute w-[40vw] h-[40vw] bg-emerald-300/30 rounded-full blur-3xl -top-20 -left-20 animate-pulse"></div>
+    <div class="absolute w-[30vw] h-[30vw] bg-blue-300/30 rounded-full blur-3xl bottom-0 -right-20 animate-pulse delay-1000"></div>
+</div>
+
+<main class="relative z-10 bg-white dark:bg-slate-800 rounded-2xl shadow-xl w-full max-w-md transform transition-all hover:shadow-2xl group">
+    <div class="p-8 space-y-6">
+        <!-- Animated Header -->
+        <header class="text-center space-y-2">
+            <div class="relative inline-block">
+                <h1 class="text-4xl font-bold bg-gradient-to-r from-emerald-500 to-cyan-500 bg-clip-text text-transparent">
+                    Easymail
+                </h1>
+                <div class="absolute -right-6 -top-4 w-8 h-8 bg-cyan-400/10 rounded-full animate-bounce"></div>
+            </div>
+            <p class="text-slate-500 dark:text-slate-400 text-sm font-light">
+                Secure Communication Platform
+            </p>
+        </header>
+
+        <!-- Registration Form -->
+        <form id="registerForm" class="space-y-5">
+            <!-- Name Field -->
+            <div class="space-y-2">
+                <label class="text-sm font-medium text-slate-700 dark:text-slate-300">Full Name</label>
+                <div class="relative">
+                    <input 
+                        type="text" 
+                        id="name"
+                        class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700/30 border border-slate-200 dark:border-slate-600 rounded-lg 
+                               focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 placeholder-slate-400
+                               transition-all duration-200"
+                        placeholder="John Doe"
+                        required
+                    />
+                    <div class="absolute right-3 top-3.5 validation-icons hidden">
+                        <hero-icon-outline-check-circle class="w-5 h-5 text-emerald-500"/>
+                        <hero-icon-outline-x-circle class="w-5 h-5 text-rose-500"/>
+                    </div>
+                </div>
+                <p class="text-xs text-rose-500 validation-message hidden"></p>
+            </div>
+
+            <!-- Email Field -->
+            <div class="space-y-2">
+                <label class="text-sm font-medium text-slate-700 dark:text-slate-300">Email Address</label>
+                <div class="relative">
+                    <input 
+                        type="email" 
+                        id="email"
+                        class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700/30 border border-slate-200 dark:border-slate-600 rounded-lg 
+                               focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 placeholder-slate-400
+                               transition-all duration-200"
+                        placeholder="john@example.com"
+                        required
+                    />
+                    <div class="absolute right-3 top-3.5 validation-icons hidden">
+                        <hero-icon-outline-check-circle class="w-5 h-5 text-emerald-500"/>
+                        <hero-icon-outline-x-circle class="w-5 h-5 text-rose-500"/>
+                    </div>
+                </div>
+                <p class="text-xs text-rose-500 validation-message hidden"></p>
+            </div>
+
+            <!-- Password Field -->
+            <div class="space-y-2">
+                <label class="text-sm font-medium text-slate-700 dark:text-slate-300">Password</label>
+                <div class="relative">
+                    <input 
+                        type="password" 
+                        id="password"
+                        class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700/30 border border-slate-200 dark:border-slate-600 rounded-lg 
+                               focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 placeholder-slate-400
+                               transition-all duration-200"
+                        placeholder="••••••••"
+                        required
+                        minlength="8"
+                    />
+                    <div class="absolute right-3 top-3.5 validation-icons hidden">
+                        <hero-icon-outline-check-circle class="w-5 h-5 text-emerald-500"/>
+                        <hero-icon-outline-x-circle class="w-5 h-5 text-rose-500"/>
+                    </div>
+                </div>
+                <div class="password-strength mt-2 hidden">
+                    <div class="flex gap-1">
+                        <div class="h-1 w-1/4 rounded-full bg-slate-200 strength-segment"></div>
+                        <div class="h-1 w-1/4 rounded-full bg-slate-200 strength-segment"></div>
+                        <div class="h-1 w-1/4 rounded-full bg-slate-200 strength-segment"></div>
+                        <div class="h-1 w-1/4 rounded-full bg-slate-200 strength-segment"></div>
+                    </div>
+                    <p class="text-xs mt-1 text-slate-500 strength-text"></p>
+                </div>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="space-y-2">
+                <label class="text-sm font-medium text-slate-700 dark:text-slate-300">Confirm Password</label>
+                <div class="relative">
+                    <input 
+                        type="password" 
+                        id="confirmPassword"
+                        class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700/30 border border-slate-200 dark:border-slate-600 rounded-lg 
+                               focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 placeholder-slate-400
+                               transition-all duration-200"
+                        placeholder="••••••••"
+                        required
+                    />
+                    <div class="absolute right-3 top-3.5 validation-icons hidden">
+                        <hero-icon-outline-check-circle class="w-5 h-5 text-emerald-500"/>
+                        <hero-icon-outline-x-circle class="w-5 h-5 text-rose-500"/>
+                    </div>
+                </div>
+                <p class="text-xs text-rose-500 validation-message hidden"></p>
+            </div>
+
+            <button 
+                type="submit" 
+                class="w-full py-3.5 px-6 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg font-medium text-white 
+                       transform transition-all hover:scale-[1.02] hover:shadow-lg active:scale-95
+                       disabled:opacity-50 disabled:pointer-events-none"
+            >
+                Create Secure Account
+            </button>
+
+            <!-- Ajout de la proposition de connexion -->
+            <div class="mt-6 text-center">
+                <p class="text-sm text-slate-500 dark:text-slate-400">
+                    Already have an account?
+                    <a href="#" class="ml-1 font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors">
+                        Log in here
+                    </a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Success State -->
+    <div id="successState" class="absolute inset-0 bg-white dark:bg-slate-800 rounded-2xl p-8 flex flex-col items-center justify-center hidden">
+        <div class="mb-4 relative">
+            <hero-icon-outline-check-circle class="w-16 h-16 text-emerald-500 animate-pop-in"/>
+            <div class="absolute inset-0 bg-emerald-500/10 rounded-full animate-ping-slow"></div>
+        </div>
+        <h2 class="text-xl font-semibold text-slate-800 dark:text-slate-200 mb-2">Account Created!</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-center text-sm">
+            Welcome to secure communication<br>
+            <span class="text-emerald-500">Redirecting to dashboard...</span>
+        </p>
+    </div>
+</main>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
